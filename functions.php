@@ -1,12 +1,33 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * _s-child functions and definitions
+ *
+ * This is the functions.php file of the child theme of _s
+ *
+ * @link https://github.com/kamlesh08/My-First-Theme-_s-Child-
+ *
+ * @package _s-child
+ * @since 0.0.1
  */
 if (!function_exists('_s_child_register_tasks')) {
 
+/**
+ * Summary.
+ *
+ * Description.
+ *
+ * @since x.x.x
+ *
+ * @see Function/method/class relied on
+ * @link URL
+ * @global type $varname Description.
+ * @global type $varname Description.
+ *
+ * @param type $var Description.
+ * @param type $var Optional. Description. Default.
+ * @return type Description.
+ */
 // Register Custom Post Type
 	function _s_child_register_tasks() {
 
