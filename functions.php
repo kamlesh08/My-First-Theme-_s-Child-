@@ -83,3 +83,11 @@ if (!function_exists('_s_child_register_tasks')) {
 
 	add_action('init', '_s_child_register_tasks', 0);
 }
+/**
+ * Register meta box(es).
+ */
+function wpdocs_register_meta_boxes() {
+	add_meta_box('meta-box-id', __('My Meta Box', 'textdomain'), 'wpdocs_my_display_callback', 'task');
+}
+
+add_action('add_meta_boxes', 'wpdocs_register_meta_boxes');
