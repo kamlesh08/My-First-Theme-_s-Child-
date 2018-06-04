@@ -5,30 +5,15 @@
  *
  * This is the functions.php file of the child theme of _s
  *
- * @link https://github.com/kamlesh08/My-First-Theme-_s-Child-
- *
- * @package _s-child
  * @since 0.0.1
  */
 if (!function_exists('_s_child_register_tasks')) {
 
 /**
- * Summary.
+ * Register tasks custom post type
  *
- * Description.
- *
- * @since x.x.x
- *
- * @see Function/method/class relied on
- * @link URL
- * @global type $varname Description.
- * @global type $varname Description.
- *
- * @param type $var Description.
- * @param type $var Optional. Description. Default.
- * @return type Description.
+ * @since 0.0.1
  */
-// Register Custom Post Type
 	function _s_child_register_tasks() {
 
 		$labels = array(
