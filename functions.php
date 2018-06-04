@@ -9,13 +9,13 @@
  */
 if (!function_exists('_s_child_register_tasks')) {
 
-/**
- * Register tasks custom post type
- *
- * @since 0.0.1
- */
+	/**
+	 * Register tasks custom post type
+	 *
+	 * @since 0.0.1
+	 */
 	function _s_child_register_tasks() {
-
+		// all the labels & strings for post type
 		$labels = array(
 			'name' => _x('Tasks', 'Post Type General Name', '_s-child theme'),
 			'singular_name' => _x('Task', 'Post Type Singular Name', '_s-child theme'),
@@ -45,6 +45,7 @@ if (!function_exists('_s_child_register_tasks')) {
 			'items_list_navigation' => __('Task list navigation', '_s-child theme'),
 			'filter_items_list' => __('Filter task list', '_s-child theme'),
 		);
+		// parameters for task custom post type
 		$args = array(
 			'label' => __('Task', '_s-child theme'),
 			'description' => __('Register task as post type', '_s-child theme'),
@@ -68,6 +69,7 @@ if (!function_exists('_s_child_register_tasks')) {
 
 	add_action('init', '_s_child_register_tasks', 0);
 }
+
 /**
  * Register meta box(es).
  */
