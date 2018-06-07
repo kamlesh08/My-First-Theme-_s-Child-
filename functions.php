@@ -67,6 +67,7 @@ if (!function_exists('_s_child_register_tasks')) {
 		register_post_type('task', $args);
 	}
 
+    // hook registration into init
 	add_action('init', '_s_child_register_tasks', 0);
 }
 
