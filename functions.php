@@ -72,10 +72,11 @@ if (!function_exists('_s_child_register_tasks')) {
 }
 
 /**
- * Register meta box(es).
+ * Registers task status metabox
  */
-function wpdocs_register_meta_boxes() {
-	add_meta_box('meta-box-id', __('My Meta Box', 'textdomain'), 'wpdocs_my_display_callback', 'task');
+function _s_child_register_task_status_meta_box() {
+	add_meta_box('_s_child_task_status', __('Task Status', '_s-child theme'), '_s_child_task_status_metabox_ui', 'task');
 }
 
-add_action('add_meta_boxes', 'wpdocs_register_meta_boxes');
+// hook taks metabox registration into add_meta_boxes hook
+add_action('add_meta_boxes', '_s_child_register_meta_boxes');
