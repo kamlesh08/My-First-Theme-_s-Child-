@@ -18,14 +18,14 @@ if (!function_exists('_s_child_register_tasks')) {
 		$labels = array(
 			'name' => _x('Tasks', 'Post Type General Name', '_s-child theme'),
 			'singular_name' => _x('Task', 'Post Type Singular Name', '_s-child theme'),
-			'menu_name' => __('Task', '_s-child theme'),
-			'name_admin_bar' => __('Task', '_s-child theme'),
+			'menu_name' => __('Task Types', '_s-child theme'),
+			'name_admin_bar' => __('Task Types', '_s-child theme'),
 			'archives' => __('Task Archives', '_s-child theme'),
 			'attributes' => __('Task Attributes', '_s-child theme'),
 			'parent_item_colon' => __('Parent Task', '_s-child theme'),
 			'all_items' => __('All Tasks', '_s-child theme'),
 			'add_new_item' => __('Add New Tasks', '_s-child theme'),
-			'add_new' => __('Task', '_s-child theme'),
+			'add_new' => __('Add New Task', '_s-child theme'),
 			'new_item' => __('New Task', '_s-child theme'),
 			'edit_item' => __('Edit Task', '_s-child theme'),
 			'update_item' => __('Update Task', '_s-child theme'),
@@ -42,7 +42,7 @@ if (!function_exists('_s_child_register_tasks')) {
 			'uploaded_to_this_item' => __('Uploaded to this task', '_s-child theme'),
 			'items_list' => __('Tasks list', '_s-child theme'),
 			'items_list_navigation' => __('Task list navigation', '_s-child theme'),
-			'filter_items_list' => __('Filter task list', '_s-child theme'),
+			'filter_items_list' => __('Filter items task', '_s-child theme'),
 		);
 		// parameters for task custom post type
 		$args = array(
