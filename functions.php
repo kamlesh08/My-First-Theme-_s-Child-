@@ -77,8 +77,8 @@ function _s_child_register_task_status_meta_box() {
 	add_meta_box('_s_child_task_status', __('Task Status', '_s-child theme'), '_s_child_task_status_metabox_ui', 'task');
 }
 
-// hook taks metabox registration into add_meta_boxes hook
-add_action('add_meta_boxes', '_s_child_register_meta_boxes');
+// hook tasks metabox registration into add_meta_boxes hook
+add_action('add_meta_boxes', '_s_child_register_task_status_meta_box');
 
 /**
  * Displays the task status metabox UI
