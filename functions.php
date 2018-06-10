@@ -85,23 +85,26 @@ add_action('add_meta_boxes', '_s_child_register_task_status_meta_box');
  *
  * @param object $post
  */
-function _s_child_task_status_metabox_ui($post) {
+function _s_child_task_status_metabox_ui( $post ) {
 
-	(int) $task_status = get_post_meta($post->ID, '_s_child_task_status', true)
+	( int ) $task_status = get_post_meta( $post->ID, '_s_child_task_status', true);
 	?>
 	<input type="checkbox" name="_s_child_task_status" id="_s_child_task_status" value="1" <?php checked($task_status); ?> >
 	<label for="_s_child_task_status"> Is the task completed? </label>
 	<?php
 }
 
-add_action('save_post_task', '_child_save_task_status');
+// hook into task's post type save action
+add_action('save_post_task', '_s_child_save_task_status');
 
 /**
  * Save Task Status in Post meta
  *
  * @param int $post_id Post ID
  */
-function _s_child_save_task_status($post_id) {
+function _s_child_save_task_status( $post_id ) {
+	
 	$task_status = $_POST['_s_child_task_status'];
+	
 	update_post_meta($post_id, '_s_child_task_status', $task_status);
 }
