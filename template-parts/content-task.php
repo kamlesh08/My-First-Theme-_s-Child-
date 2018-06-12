@@ -8,6 +8,11 @@
 	<header class="entry-header">
 		<?php
 		if (is_singular()) :
+			global $post;
+			(int) $task_status = get_post_meta($post->ID, '_s_child_task_status', true);
+			?>
+			<input type="checkbox" name="_s_child_task_status" id="_s_child_task_status" value="1" disabled="disabled" <?php checked($task_status); ?> >
+			<?php
 			the_title('<h1 class="entry-title">', '</h1>');
 		else :
 			the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
@@ -47,7 +52,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-<?php _s_entry_footer(); ?>
+		<?php _s_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
